@@ -1,0 +1,181 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Online (Interaction) Training Platform. Enhance yours skills within Automation Testing (Selenium WebDriver), Complicated Tasks &amp; Framework Design…">
+    <meta name="author" content="Gianni Bruno">
+    <meta name="keywords" content="WebDriver University, WebDriver, Webdriver, Selenium, Selenium WebDriver, Automation Testing, Automation Testing Platform, Java, Jenkins, Cucumber, BDD, TestNG, JUNit">
+
+    <title>WebDriver | Actions</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+      #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+      #container { width: 300px; height: 300px; }
+      #container h3 { text-align: center; margin: 0; margin-bottom: 10px; }
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+          drop: function( event, ui ) {
+            $( this )
+            .addClass( "ui-state-highlight" )
+            .find( "p" )
+            .html( "<b>Dropped!<b>" )
+            .css("background-color","#F45950")
+            .css("height","100%");
+          }
+        });
+      } );
+    </script>
+
+    <script>
+      $( function() {
+        $( "#menu" ).menu();
+      } );
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-228047513-1">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-228047513-1');
+    </script>
+    
+</head>
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" id="nav-title" href="..\index.html">WebdriverUniversity.com (Actions)</a>
+        </div>
+      </div>
+    <!-- /.container -->
+    </nav> 
+
+
+    <!-- Page Content -->
+    <div class="container">     
+     <div class="col-lg-12 text-center">
+      <h1 id="main-header">The Key to Success is to take massive ACTION!</h1>
+      </div>
+      <!-- Drag & Drop -->
+      <div class="col-lg-6 text-center">
+        <div class="thumbnail" id="div-drag-drop-thumbnail">
+          <div id="draggable" class="ui-widget-content ui-draggable ui-draggable-handle" style="position: relative;">
+            <p><b>DRAG ME TO MY TARGET!</b></p>
+          </div>
+          <div id="droppable" class="ui-widget-header ui-droppable">
+            <p><b>DROP HERE!</b></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <div class="thumbnail" id="div-drag-drop-thumbnail">
+          <div id="double-click" class="div-double-click">
+            <h2>Double Click Me!</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-12 text-center">
+        <div class="thumbnail" id="div-hover">
+
+          <div class="dropdown hover" style="float:left;">
+            <button class="dropbtn">Hover Over Me First!</button>
+            <div class="dropdown-content" style="left:0;">
+              <a href="#" class="list-alert">Link 1</a>
+            </div>
+          </div>
+
+
+          <div class="dropdown" style="float:center;">
+            <button class="dropbtn">Hover Over Me Second!</button>
+            <div class="dropdown-content" style="left:0;">
+              <a href="#" class="list-alert">Link 1</a>
+            </div>
+          </div>
+
+          <div class="dropdown" style="float:right;">
+            <button class="dropbtn">Hover Over Me Third!</button>
+            <div class="dropdown-content" style="left:0;">
+              <a href="#" class="list-alert">Link 1</a>
+              <a href="#" class="list-alert">Link 1</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 text-center" id="click-box" style="background: tomato; font-size: 30px;">Dont release me!!!</div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright © www.GianniBruno.com</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(".div-double-click").dblclick(function() {
+        $(this).toggleClass("double");
+      });
+    </script>
+
+    <script>
+      $(".list-alert").click(function() {
+        alert("Well done you clicked on the link!");
+      });
+    </script>
+
+    <script>
+      var box = $('#click-box').mousedown( function() {
+        $(this).css ("background", "#00ff00");
+        $(this).text("Well done! keep holding that click now.....");
+        $(this).css("fontSize", 30);
+      });
+
+      box.mouseup( function() {
+        $(this).css("background", "tomato");
+        $(this).text("Dont release me!!!");
+      });
+    </script>
+
+</div></body></html>
